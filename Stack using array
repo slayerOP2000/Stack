@@ -15,7 +15,7 @@ class Stack{
     }
     void push(int element)
     {
-        if(size-top>1)
+        if(size-top>1) // If Stack is empty tbhi toh push krenge
         {
             top++;
             arr[top] = element;
@@ -26,7 +26,7 @@ class Stack{
         }
     }
     void pop(){
-        if(top >=0)
+        if(top >=0) // If stack is having element
         {
             top--;
         }
@@ -35,7 +35,7 @@ class Stack{
         }
     }
     int peek(){
-        if(top>=0)
+        if(top>=0) // If array does not cross
         {
             return arr[top];
         }
@@ -46,7 +46,7 @@ class Stack{
         }
     }
     bool isEmpty(){
-        if(top == -1)
+        if(top == -1) 
         {
             return true;
         }
