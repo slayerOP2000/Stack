@@ -1,0 +1,23 @@
+void sorted(stack<int>&s,int x){
+    if(s.empty()||s.top()<x){
+        s.push(x);
+        return;
+    }
+    int num=s.top();
+    s.pop();
+    sorted(s,x);
+    s.push(num);
+}
+void SortedStack :: sort()
+{
+   //Your code here
+   if(s.empty()){
+       return;
+   }
+   int num=s.top();
+   s.pop();
+   //recursive call
+   sort();
+   sorted(s,num);
+   
+}
