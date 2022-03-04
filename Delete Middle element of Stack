@@ -1,0 +1,24 @@
+class Solution
+{
+    
+    public:
+    void solve(stack<int>&s, int sizeOfStack,int count){
+    //Base case
+        if(count == sizeOfStack/2)
+        {
+            s.pop();    // MIDDLE ELEMENT KO BHR NIKALOOO
+            return;
+        }
+        int num = s.top();     //Number ko bhr nikalke alg rkhlo
+        s.pop();               //Number htaa doo
+        solve(s,sizeOfStack,count+1);   //recursivly baaki case solve hojayenge   
+        s.push(num);           // Jo number Nikalee ho bhai usko saath lete janaaa.
+    }
+    //Function to delete middle element of a stack.
+    void deleteMid(stack<int>&s, int sizeOfStack)
+    {
+        // code here.. 
+        int count = 0;
+        solve(s,sizeOfStack,count);
+    }
+};
